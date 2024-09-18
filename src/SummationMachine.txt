@@ -1,0 +1,5 @@
+alphabet: {B,1,0}
+states: {q0,q1,q2,q3,q4}
+start_state: {q0}
+final_states: {q4}
+actions: {(q0,1,1,R,q0), (q0,0,1,R,q1), (q1,1,1,R,q1), (q1,B,B,L,q2), (q2,1,B,L,q3), (q3,1,1,L,q3), (q3,B,B,R,q4)}

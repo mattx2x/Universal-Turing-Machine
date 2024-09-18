@@ -1,0 +1,5 @@
+alphabet: {B,1,x,y,0}
+states: {q0,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13}
+start_state: {q0}
+final_states: {q13}
+actions: {(q0,1,1,R,q0), (q0,0,0,R,q1), (q1,1,1,R,q1), (q1,B,0,L,q2), (q2,1,1,L,q2), (q2,0,0,R,q3), (q3,x,x,R,q3), (q3,0,B,L,q12), (q3,1,x,L,q4), (q4,x,x,L,q4), (q4,0,0,L,q5), (q5,y,y,L,q5), (q5,1,y,R,q6), (q5,B,B,R,q11), (q6,y,y,R,q6), (q6,0,0,R,q7), (q7,1,1,R,q7), (q7,x,x,R,q7), (q7,0,0,R,q8), (q8,1,1,R,q8), (q8,B,1,L,q9), (q9,1,1,L,q9), (q9,0,0,L,q10), (q10,1,1,L,q10), (q10,x,x,L,q10), (q10,0,0,L,q5), (q11,y,1,R,q11), (q11,0,0,R,q3), (q12,x,B,L,q12), (q12,0,B,L,q12), (q12,1,B,L,q12), (q12,B,B,R,q13)}
