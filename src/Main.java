@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -14,9 +15,27 @@ public class Main {
 
         String[] machineSpecifics = new String[4];
         machineSpecifics[3] = "";
-//        Scanner sc = new Scanner(new File("src/MultiplicationMachine.txt"));
-        Scanner sc = new Scanner(new File("src/SummationMachine.txt"));
-//        Scanner sc = new Scanner(new File("src/test.txt"));
+        String path = "";
+        System.out.println("select your operation type -->  s:sum    m:mul");
+        Scanner sc = new Scanner(System.in);
+        boolean opSelected = false;
+        while (!opSelected) {
+            String op = sc.next();
+            switch (op.toLowerCase()) {
+                case "s":
+                    path = "src/SummationMachine.txt";
+                    opSelected = true;
+                    break;
+                case "m":
+                    path = "src/MultiplicationMachine.txt";
+                    opSelected = true;
+                    break;
+                default:
+                    System.out.println("error: not found operation, try again.");
+                    break;
+            }
+        }
+        sc = new Scanner(new File(path));
         String str, machineOnTape = "";
         while (sc.hasNext()) {
             str = sc.nextLine();
